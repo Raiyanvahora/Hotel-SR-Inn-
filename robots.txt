@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raiyanvahora.github.io/Hotel-SR-Inn-/sitemap.xml
