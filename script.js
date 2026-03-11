@@ -165,3 +165,20 @@
     });
   }
 })();
+
+// ===== FAQ Accordion =====
+(function initFAQ() {
+  var faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+  faqItems.forEach(function(item) {
+    var btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      var isActive = item.classList.contains('active');
+      // Close all other items
+      faqItems.forEach(function(other) { other.classList.remove('active'); });
+      // Toggle current
+      if (!isActive) item.classList.add('active');
+    });
+  });
+})();
